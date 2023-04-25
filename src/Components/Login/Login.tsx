@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-
-
+import NotesPic from "../../Assets/NotesPic.jpg"
 
 function Login() {
     return (
@@ -18,7 +17,7 @@ function Login() {
                         <div><Button/></div>
                     </Col>
                     <Col md={8}>
-                        <img src=""/>
+                        <img src={NotesPic}/>
                     </Col>
                 </Row>
             </Container>
