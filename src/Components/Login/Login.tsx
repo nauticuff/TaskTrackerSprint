@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
+import "../Login/Login.css"
 
 function Login() {
     return (
         <>
-            <Container>
+            <Container className="loginBG">
                 <Row>
                     <Col md={4} className="loginWindow">
                         <h1>Welcome Back, </h1>
@@ -14,7 +15,8 @@ function Login() {
                         <input/>
                         <p>Password</p>
                         <input/>
-                        <div><Button>Login</Button></div>
+                        <Button>Login</Button>
+                        <p>New User? <span>Create an Account</span></p>
                     </Col>
                     <Col md={8}>
                         <img src={NotesPic}/>
