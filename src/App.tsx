@@ -9,7 +9,10 @@ function App() {
       <p>Hello</p>
       <BrowserRouter>
         <Routes>
-          <Route path='/Login' element={<Login />} />
+          <Route path='/' element={<Login />} />
+          {/* <Route path='/CreateAccount' element={<CreateAccount />} />
+          <Route path='Dashboard' element={<Dashboard />} />
+          <Route path='Account' element={<Account />} /> */}
         </Routes>
       </BrowserRouter>
     </>
