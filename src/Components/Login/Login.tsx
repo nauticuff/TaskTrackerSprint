@@ -14,7 +14,7 @@ function Login() {
                         <input/>
                         <p>Password</p>
                         <input/>
-                        <div><Button/></div>
+                        <div><Button>Login</Button></div>
                     </Col>
                     <Col md={8}>
                         <img src={NotesPic}/>
