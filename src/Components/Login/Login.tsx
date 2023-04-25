@@ -7,7 +7,7 @@ function Login() {
         <>
             <Container>
                 <Row>
-                    <Col md={4}>
+                    <Col md={4} className="loginWindow">
                         <h1>Welcome Back, </h1>
                         <p>Login to continue developing amazing ideas</p>
                         <p>Username</p>
