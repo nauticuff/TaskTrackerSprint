@@ -245,7 +245,14 @@ input{
     .loginWindow *:not(.welcomeTxtAndPic *) {
         min-width: 200px;
       }
-    
+.loginWindow{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}    
+
     .introText{
         font-size: 10px;
         padding-bottom: 3rem;
