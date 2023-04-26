@@ -7,7 +7,6 @@ import { Routes } from 'react-router';
 function App() {
   return (
     <>
-      <Login/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
