@@ -257,6 +257,18 @@ input{
     background-color: #343A40;
 }
 
+.logoText{
+    position: absolute;
+    display: flex;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    color: white;
+    font-weight: bold;
+}
+
 /* .titleAndLogin{
     display: flex;
     flex-direction: column;
@@ -408,6 +420,11 @@ input{
     }
 
     .loginImage {
+        display: none;
+    }
+
+    .logoText
+    {
         display: none;
     }
 
