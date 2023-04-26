@@ -16,9 +16,27 @@
 } */
 
 .titleText{
-    
+    margin-bottom: 0;
 }
 
+.titleAndLogo{
+ display: flex;
+ justify-content: center;
+ padding-bottom: 2rem;
+ align-items: center;
+ gap: 10px;
+}
+
+.titleAndLogo *{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.notePicImage{
+    height: 33.56px;
+}
 
 
 .loginWindow *:not(.welcomeTxtAndPic *) {

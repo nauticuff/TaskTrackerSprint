@@ -3,6 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
 import handwavepic from "../../Assets/handwavepic.png"
+import NotePic from "../../Assets/notePic.png"
 
 function Login() {
     return (
@@ -12,8 +13,9 @@ function Login() {
                 <Row className="loginMobile">
                     <Col md={5} className="loginContainer">
                         <div className="titleAndLogin">
-                            <div>
-                                <h1 className=" text-center">Hello World</h1>
+                            <div className="titleAndLogo">
+                                <img className="notePicImage" src={NotePic}/>
+                                <h1 className="titleText text-center">Task Tracker</h1>
                             </div>
                             <div className="loginWindow">
                                 <div className="welcomeTxtAndPic">
