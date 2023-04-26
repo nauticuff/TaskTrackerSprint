@@ -20,8 +20,8 @@ const DashboardComponent = (): JSX.Element => {
                         <Col className="col-6">
                             <p className="fs-5 text-light m-0">Task Tracker</p>
                         </Col>
-                        <Col className="col-6 d-flex justify-content-end">
-                            <Button onClick={handleAccount} className="btn-link text-decoration-none account-btn">
+                        <Col className="col-6 d-flex justify-content-end p-0">
+                            <Button onClick={handleAccount} className="btn-link bg-transparent text-decoration-none account-btn m-0 pb-4">
                                 <p className="text-light m-0">Account</p>
                             </Button>
                         </Col>
@@ -44,12 +44,12 @@ const DashboardComponent = (): JSX.Element => {
                                     <Row className="justify-content-center pt-4">
                                         <Col className="col-10 rounded mb-3 bg-light pt-3 px-3">
                                             <Row>
-                                                <Col className="col-6">
-                                                   <p className="fw-bold">Name of task</p> 
+                                                <Col className="col-6 d-flex">
+                                                   <p className="fw-bold align-self-center">Name of task</p> 
                                                 </Col>
                                                 <Col className="col-6 d-flex justify-content-end">
-                                                    <Button className="align-self-start bg-transparent border border-0 p-0">
-                                                        <img src={ThreeDots} alt="three dots" height={'24px'} width={'24px'} />
+                                                    <Button className="align-self-start bg-transparent border border-0 p-0 m-0">
+                                                        <img className="" src={ThreeDots} alt="three dots" height={'24px'} width={'24px'} />
                                                     </Button>
                                                 </Col>
                                             </Row>
