@@ -246,13 +246,180 @@ input{
         min-width: 200px;
       }
 .loginWindow{
-    height: 100vh;
+ background-color: #ADB5BD !important;
+}
+
+.loginContainer{
+    display: flex;
+}
+
+.loginScreen {
+    background-color: #343A40;
+}
+
+.loginWindow *:not(.welcomeTxtAndPic *) {
+    min-width: 294px;
+  }
+
+.introText{
+    font-size: 12px;
+    padding-bottom: 2rem !important;
+    padding-top: .5rem;
+}
+
+p{
+    margin-bottom: .5rem !important;
+}
+
+.passTextSpace{
+    padding-top: 1rem;
+}
+
+.newText{
+    font-size: 10px;
+}
+
+.createText{
+    color: white;
+}
+
+.newAndCreateText{
+    text-align: center;
+}
+
+Button{
+    margin-top: 1.75rem !important;
+    margin-bottom: 1rem !important;
+    background-color: #1E1E1E !important;
+    height: 50px;
+}
+
+input{
+    background-color: #343A40;
+    border-radius: 1rem;
+    height: 37px;
+}
+
+.handPic{
+    height: 26px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.welcomeTxtAndPic{
+    width: 294px;
+    display: flex;
+    justify-content: baseline;
+}
+
+.loginContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}    
+    /* height: 100vh; */
+    padding: 0 !important;
+}
 
+.loginImage {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageCol {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.loginWindow {
+    height: 444px;
+    width: 424px;
+}
+
+@media (min-width: 1024px) {
+    .imageCol .col-lg-5 {
+        width: 50%;
+    }
+}
+
+
+.loginScreen {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin: 0;
+    /* height: 100vh; */
+}
+
+.loginWindow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1151px) {}
+
+
+@media (max-width: 1150px) {
+    .loginWindow {
+        margin-left: 10px;
+        margin-right: 10px;
+        overflow: none;
+    }
+
+    .loginContainer {
+        margin-left: 1rem;
+        height: 100vh;
+    }
+
+    .loginImage {
+        display: none;
+    }
+
+    .loginMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    .loginContainer {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .loginContainer {
+        margin-left: 0;
+    }
+
+    .loginWindow {
+        height: 450px;
+        width: 270px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 14px;
+    }
+
+    :root {
+        --bs-gutter-x: 1rem;
+      }
+
+    .loginWindow *:not(.welcomeTxtAndPic *) {
+        min-width: 200px;
+      }
+    
     .introText{
         font-size: 10px;
         padding-bottom: 3rem;
@@ -262,9 +429,5 @@ input{
 
     .welcomeTxtAndPic{
         width: 200px;
-    }
-
-    .createText{
-        font-size: 10px;
     }
 }
