@@ -1,5 +1,6 @@
 import './App.css';
 import Login from './Components/Login/Login';
+import DashboardComponent from './Components/Dashboard/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Routes } from 'react-router';
@@ -7,13 +8,12 @@ import { Routes } from 'react-router';
 function App() {
   return (
     <>
-      <Login/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
-          {/* <Route path='/CreateAccount' element={<CreateAccount />} />
-          <Route path='Dashboard' element={<Dashboard />} />
-          <Route path='Account' element={<Account />} /> */}
+          {/* <Route path='/CreateAccount' element={<CreateAccount />} /> */}
+          <Route path='/Dashboard' element={<DashboardComponent />} />
+          {/* <Route path='Account' element={<Account />} /> */}
         </Routes>
       </BrowserRouter>
     </>
