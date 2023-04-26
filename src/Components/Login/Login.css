@@ -257,6 +257,17 @@ input{
     background-color: #343A40;
 }
 
+/* .titleAndLogin{
+    display: flex;
+    flex-direction: column;
+} */
+
+.titleText{
+    
+}
+
+
+
 .loginWindow *:not(.welcomeTxtAndPic *) {
     min-width: 294px;
   }
