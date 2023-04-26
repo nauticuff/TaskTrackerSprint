@@ -35,6 +35,7 @@ function Login() {
                         </div>
                     </Col>
                     <Col md={7} className="imageCol">
+                        <p className="logoText">Get more done quickly,<br/>launch products sooner.</p>
                         <img className="loginImage" src={NotesPic} />
                     </Col>
                 </Row>
