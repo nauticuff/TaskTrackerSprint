@@ -44,11 +44,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^18.2.0",
-    "i": "^0.3.7",
-    "react-router-dom": "^6.10.0"
-  },
-  "devDependencies": {
     "i": "^0.3.7",
     "react-router-dom": "^6.10.0"
   }
