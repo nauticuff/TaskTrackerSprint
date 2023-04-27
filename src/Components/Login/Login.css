@@ -1,5 +1,19 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../../Assets/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../../Assets/Poppins-Bold.ttf);
+}
+
 .loginWindow{
  background-color: #ADB5BD !important;
+}
+
+.loginWindow * {
+    font-family: Poppins-Regular;
 }
 
 .loginContainer{
@@ -13,13 +27,15 @@
 .logoText{
     position: absolute;
     display: flex;
+    font-family: Poppins-Bold;
+    font-weight: 900;
     font-size: 36px;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 60%;
     color: white;
-    font-weight: bold;
+    
 }
 
 /* .titleAndLogin{
@@ -55,6 +71,12 @@
     min-width: 294px;
   }
 
+  .enterLogin
+  {
+    text-align: center;
+  }
+
+
 .introText{
     font-size: 12px;
     padding-bottom: 2rem !important;
@@ -86,12 +108,17 @@ Button{
     margin-bottom: 1rem !important;
     background-color: #1E1E1E !important;
     height: 50px;
+    --bs-btn-border-color: none !important;
 }
+
 
 input{
     background-color: #343A40;
-    border-radius: 1rem;
+    border-radius: .5rem;
+    border-style: none;
     height: 37px;
+    color: white;
+    padding: 10px;
 }
 
 .handPic{
