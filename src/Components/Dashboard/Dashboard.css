@@ -1,0 +1,21 @@
+html {
+    background-color: rgba(52, 58, 64, 1);
+    height: 100vh;
+    width: 100vw;
+}
+
+.bgDark {
+    background-color: rgba(52, 58, 64, 1);
+}
+
+.account-btn:hover {
+    background-color: rgba(52, 58, 64, 1) !important;
+}
+
+.col-height {
+    min-height: 693px;
+}
+
+.smallFont {
+    font-size: .75rem;
+}
