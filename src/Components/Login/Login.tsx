@@ -13,7 +13,6 @@ function Login() {
     return (
         <div className="loginScreen">
             <div className="">
-
                 <Row className="loginMobile">
                     <Col md={5} className="loginContainer">
                         <div className="titleAndLogin">
