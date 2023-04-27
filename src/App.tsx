@@ -1,3 +1,4 @@
+
 import './App.css';
 import Login from './components/Login/Login';
 import DashboardComponent from './components/Dashboard/Dashboard';
@@ -19,5 +20,9 @@ function App() {
       </BrowserRouter>
     </>
   )
+    <div>
+   <CreateAccount  />
+    </div>
+  );
 }
 export default App;
