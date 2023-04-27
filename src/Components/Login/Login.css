@@ -1,5 +1,19 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../../Assets/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../../Assets/Poppins-Bold.ttf);
+}
+
 .loginWindow{
  background-color: #ADB5BD !important;
+}
+
+.loginWindow * {
+    font-family: Poppins-Regular;
 }
 
 .loginContainer{
@@ -10,20 +24,58 @@
     background-color: #343A40;
 }
 
+.logoText{
+    position: absolute;
+    display: flex;
+    font-family: Poppins-Bold;
+    font-weight: 900;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 60%;
+    color: white;
+    
+}
+
 /* .titleAndLogin{
     display: flex;
     flex-direction: column;
 } */
 
 .titleText{
-    
+    margin-bottom: 0;
 }
 
+.titleAndLogo{
+ display: flex;
+ justify-content: center;
+ padding-bottom: 2rem;
+ align-items: center;
+ gap: 10px;
+}
+
+.titleAndLogo *{
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.notePicImage{
+    height: 33.56px;
+}
 
 
 .loginWindow *:not(.welcomeTxtAndPic *) {
     min-width: 294px;
   }
+
+  .enterLogin
+  {
+    text-align: center;
+  }
+
 
 .introText{
     font-size: 12px;
@@ -56,12 +108,17 @@ Button{
     margin-bottom: 1rem !important;
     background-color: #1E1E1E !important;
     height: 50px;
+    --bs-btn-border-color: none !important;
 }
+
 
 input{
     background-color: #343A40;
-    border-radius: 1rem;
+    border-radius: .5rem;
+    border-style: none;
     height: 37px;
+    color: white;
+    padding: 10px;
 }
 
 .handPic{
@@ -143,6 +200,11 @@ input{
     }
 
     .loginImage {
+        display: none;
+    }
+
+    .logoText
+    {
         display: none;
     }
 
