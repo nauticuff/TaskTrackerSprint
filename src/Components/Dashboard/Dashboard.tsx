@@ -47,19 +47,19 @@ const DashboardComponent = (): JSX.Element => {
             setTasks(JSON.parse(tasksFromStorage));
         }
     
-        if (tasks.some(task => task.status === "To Do")) {
+        if (!tasks.some(task => task.status === "To Do")) {
             setFirstTodo(false);
         }
-        if (tasks.some((task) => task.status === "In Progress")) {
+        if (!tasks.some((task) => task.status === "In Progress")) {
             setFirstInprogress(false);
         }
-        if (tasks.some((task) => task.status === "Done")) {
+        if (!tasks.some((task) => task.status === "Done")) {
             setFirstDone(false);
         }
   
-        console.log('First todo: ' + firstTodo)
-        console.log('In Prog: ' + firstInprogress)
-        console.log('Done: ' + firstDone)
+        // console.log('First todo: ' + firstTodo)
+        // console.log('In Prog: ' + firstInprogress)
+        // console.log('Done: ' + firstDone)
     
     }, []);
 
