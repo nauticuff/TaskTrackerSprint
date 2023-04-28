@@ -36,9 +36,4 @@ export async function login(loginUser: { Username: string; Password: string; }) 
     return data;
 }
 
-// export async function GetLoggedInUserData(username: string) {
-//     let res = await fetch(`https://tasktrackersprintapi.azurewebsites.net//User/userbyusername/${username}`);
-//     let data = await res.json();
-//     userData = data;
-//     return userData
-// }
+
