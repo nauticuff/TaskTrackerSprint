@@ -1,0 +1,81 @@
+
+
+.rectangle{
+    position: absolute;
+width: 424px;
+height: 700px;
+left: 550px;
+top: 40px;
+background-color: #ADB5BD;
+border-radius: 15px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header{
+    margin-top: 10%;
+    padding-left: 13%;
+    margin-bottom: 0%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 10px;
+}
+.subText{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-left: 13%;
+    font-family: 'Poppins';
+    font-size: 15px;
+    
+}
+.typeText{
+    padding-left: 13%;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    
+}
+.inputBar
+{
+    justify-content: center;
+    margin-left: 13%;
+    width: 300px;
+    height: 37px;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: black;
+    background-color: #343A40;
+    -webkit-text-fill-color: white;
+}
+.signBtn
+{
+    margin-top: 7%;
+    justify-content: center;
+    margin-left: 13%;
+    width: 305px;
+    height: 37px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #1E1E1E;
+    -webkit-text-fill-color: aliceblue;  
+}
+.botText{
+    text-align: center;
+    margin-top: 0%;
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+.dBar{
+    justify-content: center;
+    margin-left: 13%;
+    width: 300px;
+    height: 37px;
+    border-radius: 10px;
+    border-width: 0px;
+    border-color: black;
+    background-color: #343A40;
+    -webkit-text-fill-color: white;  
+}
