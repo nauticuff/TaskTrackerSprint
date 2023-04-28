@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
@@ -6,6 +6,8 @@ import handwavepic from "../../Assets/handwavepic.png"
 import NotePic from "../../Assets/notePic.png"
 import { useNavigate } from "react-router";
 import { login } from "../../Services/DataService";
+import { MyContext } from "../../MyContext";
+
 
 function Login() {
 
@@ -13,9 +15,7 @@ function Login() {
     const [Username, setUsername] = useState('');
     const [Password, setPassword] = useState('');
  
-   
-        
-        const navigate = useNavigate();
+    const navigate = useNavigate();
         
     const handleLogin = async (name: any) => {
         let userData = {
@@ -63,7 +63,7 @@ function Login() {
                                 </Form>
 
 
-                                <Button>Login</Button>
+                                <Button onClick={handleLogin}>Login</Button>
                                 <div className="newAndCreateText">
                                     <p className="newText">New User? <span className="createText">Create Account</span></p>
                                 </div>
