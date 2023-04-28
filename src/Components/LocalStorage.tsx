@@ -14,7 +14,7 @@ const getLocalStorage = () => {
 
 const SaveTask = (value: ValueObject) => {
     const tasks = getLocalStorage();
-    tasks.push(value);
+    tasks.push(value); 
     localStorage.setItem('Tasks', JSON.stringify(tasks));
 }
 
@@ -31,4 +31,4 @@ function removeFromLocalStorage(object: ValueObject) {
 }
 
 
-export { SaveTask, removeFromLocalStorage};
+export { SaveTask, removeFromLocalStorage, getLocalStorage};

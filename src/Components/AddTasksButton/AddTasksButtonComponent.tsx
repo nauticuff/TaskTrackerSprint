@@ -26,6 +26,10 @@ interface AllTasksProps {
   setTasks: React.Dispatch<React.SetStateAction<TaskType[]>>;
   firstTodo: boolean;
   setFirstTodo: React.Dispatch<React.SetStateAction<boolean>>;
+  firstInprogress: boolean;
+  setFirstInprogress: React.Dispatch<React.SetStateAction<boolean>>;
+  firstDone: boolean;
+  setFirstDone: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AddTasksButton = (props: AllTasksProps) => {
@@ -57,13 +61,15 @@ const AddTasksButton = (props: AllTasksProps) => {
     }
     SaveTask(task);
     if (status == "To Do" && props.firstTodo == true) props.setFirstTodo(false);
+    if (status == "In Progress" && props.firstInprogress == true) props.setFirstInprogress(false);
+    if (status == "Done" && props.firstDone == true) props.setFirstDone(false);
 
     const tasksFromStorage = localStorage.getItem('Tasks');
     if (tasksFromStorage) {
       props.setTasks(JSON.parse(tasksFromStorage));
     }
 
-    console.log(task);
+    // console.log(task);
   }
 
   const DeleteTask = (title: string, description: string, status: string) => {
