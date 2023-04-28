@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
 import handwavepic from "../../Assets/handwavepic.png"
 import NotePic from "../../Assets/notePic.png"
+import { useNavigate } from "react-router";
+import { login } from "../../Services/DataService";
 
 function Login() {
+
+    const { setUser } = useContext(MyContext);
+    const [Username, setUsername] = useState('');
+    const [Password, setPassword] = useState('');
+ 
+   
+        
+        const navigate = useNavigate();
+        
+    const handleLogin = async (name: any) => {
+        let userData = {
+            Username,
+            Password
+        }
+        setUser(Username);
+        try {
+            let token = await login(userData);
+            if (token.token != null) {
+                localStorage.setItem("Token", token.token);
+                navigate('/DashBoard');
+            }
+        } catch (error) {
+            console.error(error);
+            
+        }
+    }
 
     return (
         <div className="loginScreen">
