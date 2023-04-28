@@ -67,7 +67,7 @@ function Login() {
                                         <input type='password' onChange={({ target: { value } }) => setPassword(value)}  />
                                     </Form.Group>
                                 </Form>
-                                <Button className="loginBtn" onClick={() => handleLogin(Username)} variant=''>Login</Button>
+                                <Button className="text-bg-dark" onClick={() => handleLogin(Username)} variant=''>Login</Button>
                                 <div className="newAndCreateText">
                                     <p className="newText">New User? <Link to="/CreateAccount" className="createText">Create Account</Link></p>
                                 </div>
