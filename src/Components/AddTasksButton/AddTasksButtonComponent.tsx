@@ -69,7 +69,6 @@ const AddTasksButton = (props: AllTasksProps) => {
       props.setTasks(JSON.parse(tasksFromStorage));
     }
 
-    // console.log(task);
   }
 
   const DeleteTask = (title: string, description: string, status: string) => {

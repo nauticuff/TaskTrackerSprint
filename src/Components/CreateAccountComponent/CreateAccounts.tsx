@@ -23,21 +23,14 @@ function CreateAccount() {
           if (result) {
               navigate('/');
           } else {
-              // toggleShowA()
           }
       }
       GetLoggedInData()
-    //navigate('/home') //will take back to home screen
       }
   
   const handleLoginClick = () => {
     navigate('/Login');
   };
-  // const [showA, setShowA] = useState(false);
-
-  // const toggleShowA = () => setShowA(!showA);
-
-
 
     return (
     <div className="body">

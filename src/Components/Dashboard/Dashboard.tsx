@@ -71,9 +71,7 @@ const DashboardComponent = (): JSX.Element => {
             setFirstDone(false);
         }
   
-        // console.log('First todo: ' + firstTodo)
-        // console.log('In Prog: ' + firstInprogress)
-        // console.log('Done: ' + firstDone)
+       
     
     }, []);
 
