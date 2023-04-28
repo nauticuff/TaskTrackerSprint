@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Routes } from 'react-router';
 import AccountComponent from './Components/Account/AccountComponent';
+import CreateAccount from './Components/Account/CreateAccountComponent/CreateAccounts';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />} />
-          {/* <Route path='/CreateAccount' element={<CreateAccount />} /> */}
+          <Route path='/CreateAccount' element={<CreateAccount />} />
           <Route path='/Dashboard' element={<DashboardComponent />} />
           <Route path='Account' element={<AccountComponent />} />
         </Routes>
