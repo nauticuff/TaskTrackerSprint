@@ -1,10 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
 
 const AccountComponent = () => {
 
     let navigate = useNavigate();
+    const [showEdit, setShowEdit] = useState(false);
+    const [showDelete, setShowDelete] = useState(false);
+    
+    const handleCloseDelete = () => setShowDelete(false);
+    const handleShowDelete = () => setShowDelete(true);
+    const handleCloseEdit = () => setShowEdit(false);
+    const handleShowEdit = () => setShowEdit(true);
+
+    const handleSaveChanges = () => {
+
+    }
+
+    const handleDeleteAccount = () => {
+        
+    }
 
     const handleBackToTasks = () => {
         navigate('/Dashboard');
@@ -31,14 +46,48 @@ const AccountComponent = () => {
                             <p>Email</p>
                             <Row>
                                 <Col className='col-6 d-flex justify-content-end'>
-                                    <Button type='button' className='btn btn-black'>
+                                    <Button type='button' className='btn btn-black' onClick={handleShowEdit}>
                                         <p className='m-0 text-truncate'>Edit Account</p>
                                     </Button>
+                                    <Modal show={showEdit} onHide={handleCloseEdit}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Modal heading</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleCloseEdit}>
+                                                Close
+                                            </Button>
+                                            <Button variant="primary" onClick={() => {
+                                                handleCloseEdit();
+                                                handleSaveChanges();
+                                            }}>
+                                                Save Changes
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </Col>
                                 <Col className='col-6 p-0'>
                                     <Button type='button' className='btn btn-black'>
                                         <p className='m-0 text-truncate'>Delete Account</p>
                                     </Button>
+                                    <Modal show={showDelete} onHide={handleCloseDelete}>
+                                        <Modal.Header closeButton>
+                                            <Modal.Title>Modal heading</Modal.Title>
+                                        </Modal.Header>
+                                        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+                                        <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleCloseDelete}>
+                                                Close
+                                            </Button>
+                                            <Button variant="primary" onClick={() => {
+                                                handleCloseDelete();
+                                                handleDeleteAccount();
+                                            }}>
+                                                Delete
+                                            </Button>
+                                        </Modal.Footer>
+                                    </Modal>
                                 </Col>
                             </Row>
                         </Col>
