@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Button, Modal } from 'react-bootstrap';
+import './AccountComponent.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AccountComponent = () => {
 
@@ -18,7 +20,7 @@ const AccountComponent = () => {
     }
 
     const handleDeleteAccount = () => {
-        
+
     }
 
     const handleBackToTasks = () => {
@@ -40,7 +42,7 @@ const AccountComponent = () => {
                         </Col>
                     </Row>
                     <Row className='justify-content-center justify-content-md-start mx-2 m-sm-0'>
-                        <Col className='col-12 col-md-8 col-lg-6 col-xl-4 bg-secondary col-height rounded-4 px-5 pt-5 pb-3'>
+                        <Col className='col-12 col-md-8 col-lg-6 col-xl-4 bg-secondary rounded-4 px-5 pt-5 pb-3'>
                             <p className='fs-5 text-light '>Account Type</p>
                             <p className='text-dark mt-4'>Full Name</p>
                             <p>Email</p>
@@ -68,7 +70,7 @@ const AccountComponent = () => {
                                     </Modal>
                                 </Col>
                                 <Col className='col-6 p-0'>
-                                    <Button type='button' className='btn btn-black'>
+                                    <Button type='button' className='btn btn-black' onClick={handleShowDelete}>
                                         <p className='m-0 text-truncate'>Delete Account</p>
                                     </Button>
                                     <Modal show={showDelete} onHide={handleCloseDelete}>
