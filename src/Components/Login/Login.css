@@ -256,4 +256,8 @@ input{
     .welcomeTxtAndPic{
         width: 200px;
     }
+
+    .createText{
+        font-size: 10px;
+    }
 }
