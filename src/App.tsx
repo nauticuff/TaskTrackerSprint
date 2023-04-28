@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Routes } from 'react-router';
 import AccountComponent from './Components/Account/AccountComponent';
-import CreateAccount from './Components/Account/CreateAccountComponent/CreateAccounts';
+import CreateAccount from './Components/CreateAccountComponent/CreateAccounts';
 
 function App() {
   return (
