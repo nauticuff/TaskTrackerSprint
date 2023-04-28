@@ -40,6 +40,20 @@ const DashboardComponent = (): JSX.Element => {
         navigate('/Account');
     }
 
+    const handleDelete = (title: string, description: string, status: string) => {
+        const task = {
+            title,
+            description,
+            status
+        }
+
+        removeFromLocalStorage(task);
+        const tasksFromStorage = localStorage.getItem('Tasks');
+        if (tasksFromStorage) {
+            setTasks(JSON.parse(tasksFromStorage));
+        }
+    }
+
     useEffect(() => {
         
         const tasksFromStorage = localStorage.getItem('Tasks');
@@ -125,7 +139,7 @@ const DashboardComponent = (): JSX.Element => {
                                                                     <p className="fw-bold align-self-center m-0">{task.title}</p>
                                                                 </Col>
                                                                 <Col className="col-2 d-flex justify-content-end">
-                                                                    <Button className="align-self-start bg-transparent border border-0 p-0 m-0">
+                                                                    <Button onClick={() => handleDelete(task.title, task.description, task.status)} className="align-self-start bg-transparent border border-0 p-0 m-0">
                                                                         <img className="" src={ThreeDots} alt="three dots" height={'24px'} width={'24px'} />
                                                                     </Button>
                                                                 </Col>
