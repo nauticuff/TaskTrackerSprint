@@ -1,21 +1,26 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useContext} from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
 import handwavepic from "../../Assets/handwavepic.png"
 import NotePic from "../../Assets/notePic.png"
-import { useNavigate } from "react-router";
+import { Link } from 'react-router-dom';
+import CreateAccount from "../CreateAccountComponent/CreateAccounts";
+import DashboardComponent from "../Dashboard/Dashboard";
 import { login } from "../../Services/DataService";
 import { MyContext } from "../../MyContext";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Login() {
-
     const { setUser } = useContext(MyContext);
     const [Username, setUsername] = useState('');
     const [Password, setPassword] = useState('');
  
-    const navigate = useNavigate();
+   
+        
+        const navigate = useNavigate();
         
     const handleLogin = async (name: any) => {
         let userData = {
@@ -43,7 +48,8 @@ function Login() {
                         <div className="titleAndLogin">
                             <div className="titleAndLogo">
                                 <img className="notePicImage" src={NotePic} />
-                                <h1 className="titleText text-center">Task Tracker</h1>
+                                <h1 className="titleText text-center">Task Tracker
+                                </h1>
                             </div>
                             <div className="loginWindow">
                                 <div className="welcomeTxtAndPic">
@@ -54,18 +60,16 @@ function Login() {
                                 <Form className="enterLogin">
                                     <Form.Group>
                                         <label className="">Username</label>
-                                        <input />
+                                        <input onChange={({ target: { value } }) => setUsername(value)} type='text' value={Username} />
                                     </Form.Group>
                                     <Form.Group>
                                         <label className="passTextSpace">Password</label>
-                                        <input type="password" />
+                                        <input type='password' onChange={({ target: { value } }) => setPassword(value)}  />
                                     </Form.Group>
                                 </Form>
-
-
-                                <Button onClick={handleLogin}>Login</Button>
+                                <Button className="loginBtn" onClick={() => handleLogin(Username)} variant=''>Login</Button>
                                 <div className="newAndCreateText">
-                                    <p className="newText">New User? <span className="createText">Create Account</span></p>
+                                    <p className="newText">New User? <Link to="/CreateAccount" className="createText">Create Account</Link></p>
                                 </div>
                             </div>
                         </div>
