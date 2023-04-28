@@ -18,10 +18,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-  )
-    <div>
-   <CreateAccount  />
-    </div>
   );
 }
 export default App;
