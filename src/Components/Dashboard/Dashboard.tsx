@@ -97,7 +97,7 @@ const DashboardComponent = (): JSX.Element => {
                             <AddTasksButton handleShow={handleShow} show={show} setShow={setShow} title={title} setTitle={setTitle} description={description} setDescription={setDescription} status={status} setStatus={setStatus} tasks={tasks} setTasks={setTasks} firstTodo={firstTodo} setFirstTodo={setFirstTodo} firstInprogress={firstInprogress} setFirstInprogress={setFirstInprogress} firstDone={firstDone} setFirstDone={setFirstDone} />
                         </Col>
                     </Row>
-                    <Row className="justify-content-between">
+                    <Row className="column-container">
                         <Col className="col-4 px-4">
                             <Container>
                                 <Row className="mb-1">
@@ -125,7 +125,7 @@ const DashboardComponent = (): JSX.Element => {
                                                         </Col>
                                                     </Row>
                                                     <p>Task Description</p>
-                                                    <p className="text-end">Name of Assignee</p>
+                                                    
                                                 </Col>
                                             </Row>
                                             :
@@ -145,32 +145,14 @@ const DashboardComponent = (): JSX.Element => {
                                                                 </Col>
                                                             </Row>
                                                             <p>{task.description}</p>
-                                                            <p className="text-end">Name of Assignee</p>
+                                                            
                                                         </Col>
                                                     </Row>
                                                 ))
                                         }
-
-                                        {/* <Row className="justify-content-center pt-4">
-                                            <Col className="col-10 rounded mb-3 bg-light pt-0 px-3">
-                                                <Row>
-                                                    <Col className="col-10 d-flex">
-                                                        <p className="fw-bold align-self-center m-0">{firstTodo ? "Name of task" : ""}</p>
-                                                    </Col>
-                                                    <Col className="col-2 d-flex justify-content-end">
-                                                        <Button className="align-self-start bg-transparent border border-0 p-0 m-0">
-                                                            <img className="" src={ThreeDots} alt="three dots" height={'24px'} width={'24px'} />
-                                                        </Button>
-                                                    </Col>
-                                                </Row>
-                                                <p>{firstTodo ? "Task Description" : ""}</p>
-                                                <p className="text-end">Name of Assignee</p>
-                                            </Col>
-                                        </Row> */}
-
                                         <Row className="justify-content-center pt-4">
                                             <Col className="col-10 rounded mb-3 pt-0 px-3">
-                                                <Button onClick={() => handleShow()} className={todoIsVisible ? "" : "d-none"}>+ Create Task</Button>
+                                                <Button onClick={() => handleShow()}>+ Create Task</Button>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -204,7 +186,7 @@ const DashboardComponent = (): JSX.Element => {
                                                         </Col>
                                                     </Row>
                                                     <p>Task Description</p>
-                                                    <p className="text-end">Name of Assignee</p>
+                                                    
                                                 </Col>
                                             </Row>
                                             :
@@ -224,14 +206,14 @@ const DashboardComponent = (): JSX.Element => {
                                                                 </Col>
                                                             </Row>
                                                             <p>{task.description}</p>
-                                                            <p className="text-end">Name of Assignee</p>
+                                                            
                                                         </Col>
                                                     </Row>
                                                 ))
                                         }
                                         <Row className="justify-content-center pt-4">
                                             <Col className="col-10 rounded mb-3 pt-0 px-3">
-                                                <Button onClick={() => handleShow()} className={inprogressIsVisible ? "" : "d-none"}>+ Create Task</Button>
+                                                <Button onClick={() => handleShow()}>+ Create Task</Button>
                                             </Col>
                                         </Row>
                                     </Col>
@@ -265,7 +247,7 @@ const DashboardComponent = (): JSX.Element => {
                                                         </Col>
                                                     </Row>
                                                     <p>Task Description</p>
-                                                    <p className="text-end">Name of Assignee</p>
+                                                    
                                                 </Col>
                                             </Row>
                                             :
@@ -285,14 +267,14 @@ const DashboardComponent = (): JSX.Element => {
                                                                 </Col>
                                                             </Row>
                                                             <p>{task.description}</p>
-                                                            <p className="text-end">Name of Assignee</p>
+                                                            
                                                         </Col>
                                                     </Row>
                                                 ))
                                         }
                                         <Row className="justify-content-center pt-4">
                                             <Col className="col-10 rounded mb-3 pt-0 px-3">
-                                                <Button onClick={() => handleShow()} className={doneIsVisible ? "" : "d-none"}>+ Create Task</Button>
+                                                <Button onClick={() => handleShow()}>+ Create Task</Button>
                                             </Col>
                                         </Row>
                                     </Col>
