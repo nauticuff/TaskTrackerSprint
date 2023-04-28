@@ -50,10 +50,10 @@ const DashboardComponent = (): JSX.Element => {
         if (tasks.some(task => task.status === "To Do")) {
             setFirstTodo(false);
         }
-        if (tasks.some((task) => task.status == "In Progress")) {
+        if (tasks.some((task) => task.status === "In Progress")) {
             setFirstInprogress(false);
         }
-        if (tasks.some((task) => task.status == "Done")) {
+        if (tasks.some((task) => task.status === "Done")) {
             setFirstDone(false);
         }
   
