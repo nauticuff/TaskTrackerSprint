@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
@@ -7,8 +7,39 @@ import NotePic from "../../Assets/notePic.png"
 import { Link } from 'react-router-dom';
 import CreateAccount from "../CreateAccountComponent/CreateAccount";
 import DashboardComponent from "../Dashboard/Dashboard";
+import { login,GetLoggedInUserData } from "../../Services/DataService";
+import { MyContext } from "../context";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Login() {
+    const { setUser } = useContext(MyContext);
+    const [Username, setUsername] = useState('');
+    const [Password, setPassword] = useState('');
+ 
+   
+        
+        const navigate = useNavigate();
+        
+    const handleLogin = async (name: any) => {
+        let userData = {
+            Username,
+            Password
+        }
+        setUser(Username);
+        try {
+            let token = await login(userData);
+            if (token.token != null) {
+                localStorage.setItem("Token", token.token);
+                await GetLoggedInUserData(Username);
+                navigate('/DashBoard', { state: { user: name } });
+            }
+        } catch (error) {
+            console.error(error);
+            
+        }
+    }
 
     return (
         <div className="loginScreen">
@@ -30,14 +61,14 @@ function Login() {
                                 <Form className="enterLogin">
                                     <Form.Group>
                                         <label className="">Username</label>
-                                        <input />
+                                        <input onChange={({ target: { value } }) => setUsername(value)} type='text' value={Username} />
                                     </Form.Group>
                                     <Form.Group>
                                         <label className="passTextSpace">Password</label>
-                                        <input type="password" />
+                                        <input type='password' onChange={({ target: { value } }) => setPassword(value)}  />
                                     </Form.Group>
                                 </Form>
-                                <Button className="loginBtn">Login</Button>
+                                <Button className="loginBtn" onClick={() => handleLogin(Username)} variant=''>Login</Button>
                                 <div className="newAndCreateText">
                                     <p className="newText">New User? <Link to="/CreateAccount" className="createText">Create Account</Link></p>
                                 </div>

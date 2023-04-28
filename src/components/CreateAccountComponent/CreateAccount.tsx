@@ -1,14 +1,14 @@
 import "./CreateAccount.css";
-import { Button, Col, Container, Row, Form } from "react-bootstrap";
+import { Button, Col, Container, Row, Form,  } from "react-bootstrap";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createAcc } from "../../Services/DataService";
-
+import { Link } from 'react-router-dom';
 
 function CreateAccount() {
     const [Username, setUsername] = useState('');
     const [Password, setPassword] = useState('');
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
   
     const handleSubmit = () => {
       let userData = {
@@ -16,23 +16,23 @@ function CreateAccount() {
           Username,
           Password
       }
-      // createAccount(userData)
-      // const GetLoggedInData = async () => {
-      //     let result = await createAcc(userData)
+      createAcc(userData)
+      const GetLoggedInData = async () => {
+          let result = await createAcc(userData)
 
-  //         if (result) {
-  //             navigate('/Login');
-  //         } else {
-  //             toggleShowA()
-  //         }
-    //   }
-    //   GetLoggedInData()
+          if (result) {
+              navigate('/');
+          } else {
+              // toggleShowA()
+          }
+      }
+      GetLoggedInData()
     //navigate('/home') //will take back to home screen
       }
   
-  // const handleSignInClick = () => {
-  //   navigate('/SignInInfo');
-  // };
+  const handleLoginClick = () => {
+    navigate('/Login');
+  };
   // const [showA, setShowA] = useState(false);
 
   // const toggleShowA = () => setShowA(!showA);
@@ -99,7 +99,7 @@ function CreateAccount() {
         <Row>
           <Col>
             <p className="botText">
-              Already have an account? <strong>Login.</strong>
+             Already have an account? <Link to="/"><strong>Login.</strong></Link> 
             </p>
           </Col>
         </Row>
