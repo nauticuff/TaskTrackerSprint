@@ -21,7 +21,7 @@ function CreateAccount() {
       //     let result = await createAcc(userData)
 
   //         if (result) {
-  //             navigate('/SignInInfo');
+  //             navigate('/Login');
   //         } else {
   //             toggleShowA()
   //         }
@@ -53,7 +53,7 @@ function CreateAccount() {
             <p className="typeText">Account Type</p>
             <Form.Group >
               <Form.Select className="dBar" placeholder="Select" >
-                
+                <option hidden>Select</option>
                 <option>Admin</option>
                 <option>User</option>
                 
