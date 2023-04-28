@@ -7,7 +7,7 @@ import NotePic from "../../Assets/notePic.png"
 import { Link } from 'react-router-dom';
 import CreateAccount from "../CreateAccountComponent/CreateAccount";
 import DashboardComponent from "../Dashboard/Dashboard";
-import { login,GetLoggedInUserData } from "../../Services/DataService";
+import { login } from "../../Services/DataService";
 import { MyContext } from "../context";
 import { useNavigate } from "react-router-dom";
 
@@ -32,8 +32,7 @@ function Login() {
             let token = await login(userData);
             if (token.token != null) {
                 localStorage.setItem("Token", token.token);
-                await GetLoggedInUserData(Username);
-                navigate('/DashBoard', { state: { user: name } });
+                navigate('/DashBoard');
             }
         } catch (error) {
             console.error(error);
