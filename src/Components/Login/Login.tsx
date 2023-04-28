@@ -39,10 +39,10 @@ function Login() {
                                 </Form>
                                 <Button className="loginBtn">Login</Button>
                                 <div className="newAndCreateText">
-                                    <div className="createAccountText">
+                                    <span className="createAccountText">
                                     <p className="newText">New User?</p>
                                     <Link to="/CreateAccount" className="createText">Create Account</Link>
-                                    </div>
+                                    </span>
                                 </div>
                             </div>
                         </div>

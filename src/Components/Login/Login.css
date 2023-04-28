@@ -38,12 +38,6 @@
     
 }
 
-/* .titleAndLogin{
-    display: flex;
-    flex-direction: column;
-} */
-
-
 
 .titleText{
     margin-bottom: 0;
@@ -73,10 +67,12 @@
     min-width: 294px;
   }
 
-  .enterLogin
+  .enterLogin *
   {
-    text-align: center;
-  }
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 
 .introText{
@@ -99,11 +95,13 @@ p{
 
 .createText{
     color: white;
+    font-size: 15px;
 }
 
 .newAndCreateText{
     text-align: center;
 }
+
 
 Button{
     margin-top: 1.75rem !important;
