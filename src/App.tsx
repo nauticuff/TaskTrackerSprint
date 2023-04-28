@@ -2,8 +2,8 @@ import './App.css';
 import Login from './Components/Login/Login';
 import DashboardComponent from './Components/Dashboard/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Routes } from 'react-router';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { Routes } from 'react-router';
 import AccountComponent from './Components/Account/AccountComponent';
 import CreateAccount from './Components/CreateAccountComponent/CreateAccounts';
 
