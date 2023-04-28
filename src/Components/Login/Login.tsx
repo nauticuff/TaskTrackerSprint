@@ -20,7 +20,7 @@ function Login() {
  
    
         
-        const navigate = useNavigate();
+    const navigate = useNavigate();
         
     const handleLogin = async (name: any) => {
         let userData = {
