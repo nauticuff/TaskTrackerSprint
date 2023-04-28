@@ -32,8 +32,8 @@ const DashboardComponent = (): JSX.Element => {
                             <AddTasksButton />
                         </Col>
                     </Row>
-                    <Row className="justify-content-between">
-                        <Col className="col-4 px-4">
+                    <Row className="justify-content-center justify-content-lg-between">
+                        <Col className="col-12 col-md-10 col-lg-4 px-4">
                             <Container>
                                 <Row className="mb-1">
                                     <Col className="col-6">
@@ -44,8 +44,8 @@ const DashboardComponent = (): JSX.Element => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="col-12 bg-secondary rounded-4 col-height">
-                                        <Row className="justify-content-center pt-4">
+                                    <Col className="col-12 bg-secondary rounded-4 overflow-auto col-height">
+                                        <Row className="justify-content-center pt-4 ">
                                             <Col className="col-10 rounded mb-3 bg-light pt-0 px-3">
                                                 <Row>
                                                     <Col className="col-10 d-flex">
@@ -65,7 +65,7 @@ const DashboardComponent = (): JSX.Element => {
                                 </Row>
                             </Container>
                         </Col>
-                        <Col className="col-4 px-4">
+                        <Col className="col-12 col-md-10 col-lg-4 px-4">
                             <Container>
                                 <Row className="mb-1">
                                     <Col className="col-6">
@@ -76,7 +76,7 @@ const DashboardComponent = (): JSX.Element => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="col-12 bg-secondary rounded-4 col-height">
+                                    <Col className="col-12 bg-secondary rounded-4 overflow-auto col-height">
                                         <Row className="justify-content-center">
                                             <Col className="col-10 rounded m-3 bg-light pt-3 px-3 mt-4">
                                                 <p>Name of task</p>
@@ -88,7 +88,7 @@ const DashboardComponent = (): JSX.Element => {
                                 </Row>
                             </Container>
                         </Col>
-                        <Col className="col-4 px-4">
+                        <Col className="col-12 col-md-10 col-lg-4 px-4">
                             <Container>
                                 <Row className="mb-1">
                                     <Col className="col-6">
@@ -99,7 +99,7 @@ const DashboardComponent = (): JSX.Element => {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Col className="col-12 bg-secondary rounded-4 col-height">
+                                    <Col className="col-12 bg-secondary rounded-4 overflow-auto col-height">
                                         <Row className="justify-content-center">
                                             <Col className="col-10 rounded m-3 bg-light pt-3 px-3 mt-4">
                                                 <p>Name of task</p>

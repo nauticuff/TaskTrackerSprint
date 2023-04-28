@@ -13,7 +13,7 @@ html {
 }
 
 .col-height {
-    min-height: 693px;
+    max-height: 693px;
 }
 
 .smallFont {
