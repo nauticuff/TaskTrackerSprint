@@ -4,6 +4,9 @@ import NotesPic from "../../Assets/NotesPic.jpg"
 import "../Login/Login.css"
 import handwavepic from "../../Assets/handwavepic.png"
 import NotePic from "../../Assets/notePic.png"
+import { Link } from 'react-router-dom';
+import CreateAccount from "../CreateAccountComponent/CreateAccount";
+import DashboardComponent from "../Dashboard/Dashboard";
 
 function Login() {
 
@@ -15,7 +18,8 @@ function Login() {
                         <div className="titleAndLogin">
                             <div className="titleAndLogo">
                                 <img className="notePicImage" src={NotePic} />
-                                <h1 className="titleText text-center">Task Tracker</h1>
+                                <h1 className="titleText text-center">Task Tracker
+                                </h1>
                             </div>
                             <div className="loginWindow">
                                 <div className="welcomeTxtAndPic">
@@ -33,11 +37,9 @@ function Login() {
                                         <input type="password" />
                                     </Form.Group>
                                 </Form>
-
-
-                                <Button>Login</Button>
+                                <Button className="loginBtn">Login</Button>
                                 <div className="newAndCreateText">
-                                    <p className="newText">New User? <span className="createText">Create Account</span></p>
+                                    <p className="newText">New User? <Link to="/CreateAccount" className="createText">Create Account</Link></p>
                                 </div>
                             </div>
                         </div>
