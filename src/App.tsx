@@ -1,6 +1,6 @@
 import './App.css';
-import Login from './Components/Login/Login';
-import DashboardComponent from './Components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import DashboardComponent from './components/Dashboard/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Routes } from 'react-router';
